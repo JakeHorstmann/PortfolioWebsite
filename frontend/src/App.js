@@ -1,16 +1,19 @@
-import logo from "./logo.svg";
 import "./App.css";
-
+import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./Home";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Logobar /> // put the navbar into the Logobar
-      </header>
-      <body className="App-body">
-        <Mainbody />
-      </body>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 
