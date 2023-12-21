@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    display: flex;
+    height: 600px;
+    background-color: silver;
+}
+
+.sectionLeft {
+    width: 50%;
+}
+.sectionRight{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}

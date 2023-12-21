@@ -1,8 +1,10 @@
 import { React, useState } from "react";
 import Logo from "./Logo";
+import "../styles/Navbar.css";
 
 function Navbar() {
   const routes = [
+    { name: "Home", link: "/" },
     { name: "Projects", link: "/projects" },
     { name: "About Me", link: "/about" },
     { name: "Contact Me", link: "/contact" },
@@ -11,12 +13,11 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="logoNavbar">
-        <p> use to take up 20% of screen</p>
+        <Logo logo_alt="My logo" />
       </div>
       <nav className="navbarLinks">
-        <p> use to display all navbarLinks</p>
         {routes.map((route) => (
-          <div className="navbarLink">
+          <div key={route.link} className="navbarLink">
             {" "}
             <a href={route.link}>{route.name}</a>
           </div>
